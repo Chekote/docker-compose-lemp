@@ -2,3 +2,11 @@ data:
   build: data
   volumes:
     - .:/data
+
+web:
+  image: nginx
+  ports:
+    - 80:80
+    - 443:443
+  volumes_from:
+    - data
