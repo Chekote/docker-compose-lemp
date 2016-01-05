@@ -3,8 +3,22 @@ data:
   volumes:
     - .:/data
 
+db:
+  image: mysql
+  ports:
+    - 3306:3306
+  volumes_from:
+    - data
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: my_project
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: password
+
 web:
   image: nginx
+  links:
+    - db
   ports:
     - 80:80
     - 443:443
