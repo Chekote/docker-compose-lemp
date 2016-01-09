@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# @todo This needs to reference the composer image on docker hub once it's published
-docker run --privileged=true --volumes-from dockerphp7_data_1 --rm dockerphp7_composer composer $1
+docker run --volumes-from dockerphp7_data_1 --rm chekote/docker-composer composer $1

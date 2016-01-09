@@ -24,8 +24,3 @@ web:
     - 443:443
   volumes_from:
     - data
-
-composer:
-  build: composer
-  volumes_from:
-    - data
