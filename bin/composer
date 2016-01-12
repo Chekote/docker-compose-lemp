@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -t --volumes-from dockerphp7_data_1 --rm chekote/composer composer $1
+docker run -t --volumes-from dockerphp7_data_1 --rm chekote/composer composer $@
