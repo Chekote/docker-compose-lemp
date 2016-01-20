@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -t --volumes-from dockercomposelemp_data_1 --rm chekote/bower bower $@
