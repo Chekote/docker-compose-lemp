@@ -1,7 +1,12 @@
+app:
+  build: app
+  volumes_from:
+    - data
+
 data:
   build: data
   volumes:
-    - .:/data
+    - ./htdocs:/data
 
 db:
   image: mysql
@@ -16,8 +21,9 @@ db:
     MYSQL_PASSWORD: password
 
 web:
-  image: nginx
+  build: nginx
   links:
+    - app
     - db
   ports:
     - 80:80
