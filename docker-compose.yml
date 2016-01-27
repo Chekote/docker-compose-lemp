@@ -1,5 +1,7 @@
 app:
   build: app
+  links:
+    - db
   volumes_from:
     - data
 
