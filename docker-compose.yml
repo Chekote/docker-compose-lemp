@@ -1,5 +1,5 @@
 app:
-  build: app
+  image: chekote/php-fpm:7.0.2-laravel5.2
   links:
     - db
   volumes_from:
