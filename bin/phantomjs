@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -t --rm chekote/phantomjs:2.1.1 phantomjs $@
