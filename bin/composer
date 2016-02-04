@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -t -v $(pwd):/data --rm chekote/composer composer $@
+docker run -t -v ~/.composer:/root/.composer -v $(pwd):/data --rm chekote/composer composer $@
